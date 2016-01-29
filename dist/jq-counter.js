@@ -25,6 +25,8 @@ var Counter = (function () {
         this.increment = this.options.start > this.options.end
             ? -1
             : 1;
+        this.counter = options.start;
+        this.update();
     }
     return Counter;
 }());

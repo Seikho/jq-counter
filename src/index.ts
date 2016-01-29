@@ -3,6 +3,8 @@ class Counter {
         this.increment = this.options.start > this.options.end
             ? -1
             : 1;
+        this.counter = options.start;
+        this.update();
     }
 
     increment = 1;
@@ -10,10 +12,10 @@ class Counter {
     timer: number;
 
     start = () => {
-        
+
         // Do not allow multiple intervals to run concurrently
         this.stop();
-        
+
         var tick = () => {
             if (this.counter === this.options.end) {
                 return this.stop();
