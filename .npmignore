@@ -1,0 +1,6 @@
+*.log
+src/
+.vscode/
+.gitignore
+.git/
+node_modules/
